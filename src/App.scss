@@ -24,23 +24,7 @@ body {
     font-weight: 500;
     font-size: 36px;
     line-height: 20px;
-    /* identical to box height, or 56% */
-
     color: #3E3E3E;
-  }
-
-  .button {
-    display: block;
-    color: #FFFFFF;
-    background: #3E3E3E;
-    border-radius: 8px;
-    // padding: 1em;
-    margin-right: 1em;
-    line-height: 44px;
-    // .search {
-    width: 88px;
-    height: 44px;
-    // }
   }
 }
 
@@ -177,28 +161,28 @@ body {
         flex-direction: row;
         justify-content: space-between;
       }
-
-      .button {
-        display: block;
-        text-align: center;
-        color: #FFFFFF;
-        background: #3E3E3E;
-        border-radius: 8px;
-        padding: 0.1em;
-        font-size: 28px;
-        width: 88px;
-        height: 44px;
-        line-height: 44px;
-
-      }
-
-      .disable {
-        background: #A9A9A9;
-      }
-
-      .ml {
-        margin-right: 12px;
-      }
     }
   }
+}
+
+.button {
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  background: #3E3E3E;
+  border-radius: 8px;
+  padding: 0.1em;
+  font-size: 28px;
+  width: 88px;
+  height: 44px;
+  line-height: 44px;
+
+}
+
+.disable {
+  background: #A9A9A9;
+}
+
+.ml {
+  margin-right: 12px;
 }

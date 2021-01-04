@@ -30,13 +30,11 @@ const Product = ({ product }) => {
           <div className="button ml">
             <span className="button-label">-</span>
           </div>
-          <div className="button">
-            <span
-              className="button-label"
-              onClick={() => dispatch({ type: "add", item: product })}
-            >
-              +
-            </span>
+          <div
+            className="button"
+            onClick={() => dispatch({ type: "add", item: product })}
+          >
+            <span className="button-label">+</span>
           </div>
         </div>
       </div>
