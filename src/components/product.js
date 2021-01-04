@@ -1,5 +1,9 @@
-const Product = ({product}) => {
-  
+import React, { useContext } from "react";
+import { CartContext } from "../App";
+
+const Product = ({ product }) => {
+  const { dispatch } = useContext(CartContext);
+
   return (
     <div className="product">
       <img
@@ -27,7 +31,12 @@ const Product = ({product}) => {
             <span className="button-label">-</span>
           </div>
           <div className="button">
-            <span className="button-label">+</span>
+            <span
+              className="button-label"
+              onClick={() => dispatch({ type: "add", item: product })}
+            >
+              +
+            </span>
           </div>
         </div>
       </div>
