@@ -22,12 +22,13 @@ const ProductListContainer = styled.div`
 `;
 
 const ProductList = () => {
+  // 今回は定数から流し込みます。本来は、API等で会部から持ってくるような処理になる想定。
   const products = [
     {
       sku_id: 1,
       name: "WH-1000XM4",
       description:
-        "Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo. Up to 30-hour battery life with quick charging (10 min chargefor 5 hours of playback)...",
+        "Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo. Up to 30-hour battery life with quick charging (10 min charge for 5 hours of playback)...",
       maker: "Sony",
       price: "278",
       stock: "4",
@@ -43,15 +44,6 @@ const ProductList = () => {
     },
     {
       sku_id: 3,
-      name: "Surface Headphones2",
-      description:
-        "Experience your favorite music and shows like never before. Designed for all-day comfort, improved...",
-      maker: "Microsoft",
-      price: "249",
-      stock: "0",
-    },
-    {
-      sku_id: 4,
       name: "Mini Plug Cable",
       description:
         "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
@@ -60,13 +52,22 @@ const ProductList = () => {
       stock: "42",
     },
     {
-      sku_id: 5,
+      sku_id: 4,
       name: "Amazon Basics Cable",
       description:
         "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
       maker: "Amazon",
       price: "10.2",
       stock: "55",
+    },
+    {
+      sku_id: 5,
+      name: "Surface Headphones2",
+      description:
+        "Experience your favorite music and shows like never before. Designed for all-day comfort, improved...",
+      maker: "Microsoft",
+      price: "249",
+      stock: "0",
     },
     {
       sku_id: 6,
