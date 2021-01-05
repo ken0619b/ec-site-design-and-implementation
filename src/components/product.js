@@ -27,7 +27,10 @@ const Product = ({ product }) => {
           </div>
         </div>
         <div className="button-wrapper">
-          <div className="button ml">
+          <div
+            className="button ml"
+            onClick={() => dispatch({ type: "remove", item: product })}
+          >
             <span className="button-label">-</span>
           </div>
           <div

@@ -4,7 +4,7 @@ import Product from "./product";
 const ProductList = () => {
   const products = [
     {
-      id: 1,
+      sku_id: 1,
       name: "WH-1000XM4",
       description:
         "Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo. Up to 30-hour battery life with quick charging (10 min chargefor 5 hours of playback)...",
@@ -13,7 +13,7 @@ const ProductList = () => {
       stock: "4",
     },
     {
-      id: 2,
+      sku_id: 2,
       name: "N700NC",
       description:
         "Great ideas are born in silence.Optimized for travel and blending first class Adaptive Noise Cancelling technology with sleek and elegant design accents, the AKG N700NC Wireless...",
@@ -22,7 +22,7 @@ const ProductList = () => {
       stock: "2",
     },
     {
-      id: 3,
+      sku_id: 3,
       name: "Surface Headphones2",
       description:
         "Experience your favorite music and shows like never before. Designed for all-day comfort, improved...",
@@ -31,7 +31,7 @@ const ProductList = () => {
       stock: "0",
     },
     {
-      id: 4,
+      sku_id: 4,
       name: "Mini Plug Cable",
       description:
         "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
@@ -40,7 +40,7 @@ const ProductList = () => {
       stock: "42",
     },
     {
-      id: 5,
+      sku_id: 5,
       name: "Amazon Basics Cable",
       description:
         "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
@@ -49,7 +49,7 @@ const ProductList = () => {
       stock: "55",
     },
     {
-      id: 6,
+      sku_id: 6,
       name: "WH-CH510",
       description:
         "Listen to your music throughout the day without interruptions. The WH-CH510 are wireless, lightweight, and have a battery life long enough to keep up....",
@@ -66,7 +66,7 @@ const ProductList = () => {
       <div className="title">Products</div>
       <div className="product-list">
         {currentProducts.map((p) => (
-          <Product product={p} key={p.id} />
+          <Product product={p} key={p.sku_id} />
         ))}
       </div>
     </div>
