@@ -1,11 +1,112 @@
 import React, { useContext } from "react";
 import { CartContext } from "../App";
+import styled from "styled-components";
+
+const Button = styled.div`
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  background: #3e3e3e;
+  border-radius: 8px;
+  padding: 0.1em;
+  font-size: 28px;
+  width: 88px;
+  height: 44px;
+  line-height: 44px;
+  .disable {
+    background: #a9a9a9;
+  }
+
+  // これどうする？
+  .ml {
+    margin-right: 12px;
+  }
+`;
+
+const ProductContainer = styled.div`
+  text-align: left;
+  background-color: #fefefe;
+  width: 320px;
+
+  > div {
+    margin-top: 12px;
+  }
+
+  > img {
+    margin-top: 40px;
+  }
+
+  .name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 20px;
+  }
+
+  .maker {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #a9a9a9;
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #a9a9a9;
+  }
+
+  .price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+    color: #a9a9a9;
+
+    .label {
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .stock {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #3e3e3e;
+    margin-top: 10px;
+
+    .label {
+      font-size: 12px;
+      line-height: 20px;
+      color: #a9a9a9;
+    }
+  }
+
+  .price-stock-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-menu-wrapper,
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
 
 const Product = ({ product }) => {
   const { dispatch } = useContext(CartContext);
 
   return (
-    <div className="product">
+    <ProductContainer>
       <img
         src={`${process.env.PUBLIC_URL}/product_images/${product.name
           .replace(/ /g, "_")
@@ -27,21 +128,21 @@ const Product = ({ product }) => {
           </div>
         </div>
         <div className="button-wrapper">
-          <div
-            className="button ml"
+          <Button
+            // className="button ml"
             onClick={() => dispatch({ type: "remove", item: product })}
           >
             <span className="button-label">-</span>
-          </div>
-          <div
-            className="button"
+          </Button>
+          <Button
+            // className="button"
             onClick={() => dispatch({ type: "add", item: product })}
           >
             <span className="button-label">+</span>
-          </div>
+          </Button>
         </div>
       </div>
-    </div>
+    </ProductContainer>
   );
 };
 

@@ -1,5 +1,25 @@
 import React, { useState } from "react";
 import Product from "./product";
+import styled from "styled-components";
+
+const ProductListContainer = styled.div`
+  margin-top: 100px;
+
+  .title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 20px;
+    /* identical to box height, or 71% */
+  }
+
+  .product-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+`;
 
 const ProductList = () => {
   const products = [
@@ -62,14 +82,14 @@ const ProductList = () => {
   const [currentProducts, setProducts] = useState(products);
 
   return (
-    <div className="products">
+    <ProductListContainer>
       <div className="title">Products</div>
       <div className="product-list">
         {currentProducts.map((p) => (
           <Product product={p} key={p.sku_id} />
         ))}
       </div>
-    </div>
+    </ProductListContainer>
   );
 };
 
