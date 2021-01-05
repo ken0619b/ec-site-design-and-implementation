@@ -26,6 +26,8 @@ const cartReducer = (state, action) => {
       return {
         cart: [
           ...state.cart,
+          // 必要な情報をもたせたオブジェクトを追加していく。
+          // 同一である場合でも格納してしまうので別の仕組みがいいかも。
           {
             sku_id: action.item.sku_id,
             name: action.item.name,
