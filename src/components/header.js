@@ -3,7 +3,11 @@ import { CartContext } from "../App";
 import styled from "styled-components";
 import Button from "../shared/button";
 
-const LeftButton = styled(Button)`
+const HeaderButton = styled(Button)`
+  width: 66px;
+`;
+
+const LeftButton = styled(HeaderButton)`
   margin-right: 12px;
 `;
 
@@ -42,12 +46,12 @@ const Header = () => {
           />
           {state.cart.length}
         </LeftButton>
-        <Button>
+        <HeaderButton>
           <img
             src={`${process.env.PUBLIC_URL}/icon/search.png`}
             alt="search items"
           />
-        </Button>
+        </HeaderButton>
       </div>
     </HeaderContainer>
   );
