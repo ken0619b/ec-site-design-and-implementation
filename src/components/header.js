@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Button from "../shared/button";
 
 const CartButton = styled(Button)`
-  margin-right: 12px;
+  margin-right: 48px;
   > img {
     margin-right: 10px
   }
