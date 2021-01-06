@@ -1,26 +1,10 @@
 import React, { useContext } from "react";
 import { CartContext } from "../App";
 import styled from "styled-components";
+import Button from "../shared/button";
 
-const Button = styled.div`
-  display: block;
-  text-align: center;
-  color: #ffffff;
-  background: #3e3e3e;
-  border-radius: 8px;
-  padding: 0.1em;
-  font-size: 28px;
-  width: 88px;
-  height: 44px;
-  line-height: 44px;
-  .disable {
-    background: #a9a9a9;
-  }
-
-  // これどうする？
-  .ml {
-    margin-right: 12px;
-  }
+const LeftButton = styled(Button)`
+  margin-right: 12px;
 `;
 
 const HeaderContainer = styled.div`
@@ -48,23 +32,23 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-        <div className="title">Forest Sound</div>
-        <div className="wrapper">
-          <Button>
-            <img
-              src={`${process.env.PUBLIC_URL}/icon/cart.png`}
-              alt="cart"
-              className="ml"
-            />
-            {state.cart.length}
-          </Button>
-          <Button>
-            <img
-              src={`${process.env.PUBLIC_URL}/icon/search.png`}
-              alt="search items"
-            />
-          </Button>
-        </div>
+      <div className="title">Forest Sound</div>
+      <div className="wrapper">
+        <LeftButton>
+          <img
+            src={`${process.env.PUBLIC_URL}/icon/cart.png`}
+            alt="cart"
+            className="ml"
+          />
+          {state.cart.length}
+        </LeftButton>
+        <Button>
+          <img
+            src={`${process.env.PUBLIC_URL}/icon/search.png`}
+            alt="search items"
+          />
+        </Button>
+      </div>
     </HeaderContainer>
   );
 };

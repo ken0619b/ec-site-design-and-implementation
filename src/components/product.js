@@ -1,26 +1,10 @@
 import React, { useContext } from "react";
 import { CartContext } from "../App";
 import styled from "styled-components";
+import Button from "../shared/button";
 
-const Button = styled.div`
-  display: block;
-  text-align: center;
-  color: #ffffff;
-  background: #3e3e3e;
-  border-radius: 8px;
-  padding: 0.1em;
-  font-size: 28px;
-  width: 88px;
-  height: 44px;
-  line-height: 44px;
-  .disable {
-    background: #a9a9a9;
-  }
-
-  // これどうする？
-  .ml {
-    margin-right: 12px;
-  }
+const LeftButton = styled(Button)`
+  margin-right: 12px;
 `;
 
 const ProductContainer = styled.div`
@@ -128,16 +112,12 @@ const Product = ({ product }) => {
           </div>
         </div>
         <div className="button-wrapper">
-          <Button
-            // className="button ml"
+          <LeftButton
             onClick={() => dispatch({ type: "remove", item: product })}
           >
             <span className="button-label">-</span>
-          </Button>
-          <Button
-            // className="button"
-            onClick={() => dispatch({ type: "add", item: product })}
-          >
+          </LeftButton>
+          <Button onClick={() => dispatch({ type: "add", item: product })}>
             <span className="button-label">+</span>
           </Button>
         </div>
