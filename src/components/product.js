@@ -114,10 +114,16 @@ const Product = ({ product }) => {
         <div className="button-wrapper">
           <LeftButton
             onClick={() => dispatch({ type: "remove", item: product })}
+            disabled={product.stock > 0 ? false : true}
+            out_of_stock={product.stock > 0 ? false : true}
           >
             <span className="button-label">-</span>
           </LeftButton>
-          <Button onClick={() => dispatch({ type: "add", item: product })}>
+          <Button
+            onClick={() => dispatch({ type: "add", item: product })}
+            disabled={product.stock > 0 ? false : true}
+            out_of_stock={product.stock > 0 ? false : true}
+          >
             <span className="button-label">+</span>
           </Button>
         </div>

@@ -3,12 +3,15 @@ import { CartContext } from "../App";
 import styled from "styled-components";
 import Button from "../shared/button";
 
-const HeaderButton = styled(Button)`
-  width: 66px;
+const CartButton = styled(Button)`
+  margin-right: 12px;
+  > img {
+    margin-right: 10px
+  }
 `;
 
-const LeftButton = styled(HeaderButton)`
-  margin-right: 12px;
+const SearchButton = styled(Button)`
+  width: 66px;
 `;
 
 const HeaderContainer = styled.div`
@@ -38,20 +41,20 @@ const Header = () => {
     <HeaderContainer>
       <div className="title">Forest Sound</div>
       <div className="wrapper">
-        <LeftButton>
+        <CartButton>
           <img
             src={`${process.env.PUBLIC_URL}/icon/cart.png`}
             alt="cart"
             className="ml"
           />
           {state.cart.length}
-        </LeftButton>
-        <HeaderButton>
+        </CartButton>
+        <SearchButton>
           <img
             src={`${process.env.PUBLIC_URL}/icon/search.png`}
             alt="search items"
           />
-        </HeaderButton>
+        </SearchButton>
       </div>
     </HeaderContainer>
   );
