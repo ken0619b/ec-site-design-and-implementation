@@ -4,6 +4,8 @@ import Story from "./components/story";
 import ProductList from "./components/product-list";
 import { createGlobalStyle } from "styled-components";
 
+import products from "./product_data";
+
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
@@ -18,11 +20,11 @@ const initialState = {
   cart: [],
 };
 
-export const CartContext = createContext();
+export const AppContext = createContext();
 
-const cartReducer = (state, action) => {
+const appReducer = (state, action) => {
   switch (action.type) {
-    case "add": {
+    case "ADD_ITEM_TO_CART": {
       return {
         cart: [
           ...state.cart,
@@ -33,10 +35,10 @@ const cartReducer = (state, action) => {
             name: action.item.name,
             price: action.item.price,
           },
-        ],
+        ]
       };
     }
-    case "remove": {
+    case "REMOVE_ITEM_FROM_CART": {
       // 同一のsku_idを持つcartのitemを探し、最初のindexを返す
       const removeIndex = state.cart
         .map((item) => item.sku_id)
@@ -56,7 +58,7 @@ const cartReducer = (state, action) => {
 };
 
 const App = () => {
-  const [state, dispatch] = useReducer(cartReducer, initialState);
+  const [state, dispatch] = useReducer(appReducer, initialState);
   const value = {
     state,
     dispatch,
@@ -65,13 +67,13 @@ const App = () => {
   return (
     <Fragment>
       <GlobalStyle />
-      <CartContext.Provider value={value}>
+      <AppContext.Provider value={value}>
         <div className="container">
           <Header />
           <Story />
           <ProductList />
         </div>
-      </CartContext.Provider>
+      </AppContext.Provider>
     </Fragment>
   );
 };

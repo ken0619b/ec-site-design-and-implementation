@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "../App";
+import { AppContext } from "../App";
 import styled from "styled-components";
 import Button from "../shared/button";
 
@@ -87,7 +87,7 @@ const ProductContainer = styled.div`
 `;
 
 const Product = ({ product }) => {
-  const { dispatch } = useContext(CartContext);
+  const { dispatch } = useContext(AppContext);
 
   return (
     <ProductContainer>
@@ -113,14 +113,18 @@ const Product = ({ product }) => {
         </div>
         <div className="button-wrapper">
           <LeftButton
-            onClick={() => dispatch({ type: "remove", item: product })}
+            onClick={() => {
+              dispatch({ type: "REMOVE_ITEM_FROM_CART", item: product });
+            }}
             disabled={product.stock > 0 ? false : true}
             out_of_stock={product.stock > 0 ? false : true}
           >
             <span className="button-label">-</span>
           </LeftButton>
           <Button
-            onClick={() => dispatch({ type: "add", item: product })}
+            onClick={() => {
+              dispatch({ type: "ADD_ITEM_TO_CART", item: product });
+            }}
             disabled={product.stock > 0 ? false : true}
             out_of_stock={product.stock > 0 ? false : true}
           >

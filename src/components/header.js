@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "../App";
+import { AppContext } from "../App";
 import styled from "styled-components";
 import Button from "../shared/button";
 
@@ -35,7 +35,7 @@ const HeaderContainer = styled.div`
 `;
 
 const Header = () => {
-  const { state } = useContext(CartContext);
+  const { state } = useContext(AppContext);
 
   return (
     <HeaderContainer>
