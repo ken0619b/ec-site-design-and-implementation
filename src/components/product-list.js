@@ -23,7 +23,7 @@ const ProductListContainer = styled.div`
 `;
 
 const ProductList = () => {
-  const [currentProducts, setProducts] = useState(products);
+  const [currentProducts] = useState(products);
 
   return (
     <ProductListContainer>
