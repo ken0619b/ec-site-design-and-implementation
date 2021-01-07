@@ -1,7 +1,9 @@
 import React, { createContext, useReducer, Fragment } from "react";
+import { BrowserRouter, Switch, Route} from "react-router-dom";
 import Header from "./components/header";
 import Story from "./components/story";
 import ProductList from "./components/product-list";
+import Cart from "./components/cart";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -31,9 +33,10 @@ const appReducer = (state, action) => {
           {
             sku_id: action.item.sku_id,
             name: action.item.name,
+            maker: action.item.maker,
             price: action.item.price,
           },
-        ]
+        ],
       };
     }
     case "REMOVE_ITEM_FROM_CART": {
@@ -66,11 +69,18 @@ const App = () => {
     <Fragment>
       <GlobalStyle />
       <AppContext.Provider value={value}>
-        <div className="container">
+        <BrowserRouter>
           <Header />
-          <Story />
-          <ProductList />
-        </div>
+          <Switch>
+            <Route exact path="/">
+              <Story />
+              <ProductList />
+            </Route>
+            <Route path="/cart">
+              <Cart />
+            </Route>
+          </Switch>
+        </BrowserRouter>
       </AppContext.Provider>
     </Fragment>
   );

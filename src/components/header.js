@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { AppContext } from "../App";
 import styled from "styled-components";
 import Button from "../shared/button";
@@ -6,7 +7,7 @@ import Button from "../shared/button";
 const CartButton = styled(Button)`
   margin-right: 48px;
   > img {
-    margin-right: 10px
+    margin-right: 10px;
   }
 `;
 
@@ -31,6 +32,7 @@ const HeaderContainer = styled.div`
     font-size: 36px;
     line-height: 20px;
     color: #3e3e3e;
+    text-decoration: none;
   }
 `;
 
@@ -39,16 +41,20 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <div className="title">Forest Sound</div>
+      <Link to="/" className="title">
+        Forest Sound
+      </Link>
       <div className="wrapper">
-        <CartButton>
-          <img
-            src={`${process.env.PUBLIC_URL}/icon/cart.png`}
-            alt="cart"
-            className="ml"
-          />
-          {state.cart.length}
-        </CartButton>
+        <Link to="/cart">
+          <CartButton>
+            <img
+              src={`${process.env.PUBLIC_URL}/icon/cart.png`}
+              alt="cart"
+              className="ml"
+            />
+            <span className="stock-count-label">{state.cart.length}</span>
+          </CartButton>
+        </Link>
         <SearchButton>
           <img
             src={`${process.env.PUBLIC_URL}/icon/search.png`}
