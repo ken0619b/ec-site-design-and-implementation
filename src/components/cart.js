@@ -119,7 +119,6 @@ const Cart = () => {
   const { dispatch } = useContext(AppContext);
 
   useEffect(() => {
-    console.log("useEffect has been called");
     // state.cartが変更される場合にcartの中身から、CartItemで表示させるために集計をする。
     // cartからitemを抜き出し、
     const aggregated_cart_items = state.cart.reduce((result, current_item) => {
