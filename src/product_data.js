@@ -5,7 +5,7 @@ const products = [
     description:
       "Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo. Up to 30-hour battery life with quick charging (10 min charge for 5 hours of playback)...",
     maker: "Sony",
-    price: "278",
+    price: 278,
     stock: "4",
   },
   {
@@ -14,7 +14,7 @@ const products = [
     description:
       "Great ideas are born in silence.Optimized for travel and blending first class Adaptive Noise Cancelling technology with sleek and elegant design accents, the AKG N700NC Wireless...",
     maker: "AKG",
-    price: "349",
+    price: 349,
     stock: "2",
   },
   {
@@ -23,7 +23,7 @@ const products = [
     description:
       "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
     maker: "Millso",
-    price: "18",
+    price: 18,
     stock: "42",
   },
   {
@@ -32,7 +32,7 @@ const products = [
     description:
       "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
     maker: "Amazon",
-    price: "10.2",
+    price: 10.2,
     stock: "55",
   },
   {
@@ -41,7 +41,7 @@ const products = [
     description:
       "Experience your favorite music and shows like never before. Designed for all-day comfort, improved...",
     maker: "Microsoft",
-    price: "249",
+    price: 249,
     stock: "0",
   },
   {
@@ -50,7 +50,7 @@ const products = [
     description:
       "Listen to your music throughout the day without interruptions. The WH-CH510 are wireless, lightweight, and have a battery life long enough to keep up....",
     maker: "Sony",
-    price: "59",
+    price: 59,
     stock: "14",
   },
 ];

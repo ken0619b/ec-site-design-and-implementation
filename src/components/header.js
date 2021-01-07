@@ -58,7 +58,7 @@ const Header = () => {
         <SearchButton>
           <img
             src={`${process.env.PUBLIC_URL}/icon/search.png`}
-            alt="search items"
+            alt="delete item"
           />
         </SearchButton>
       </div>
