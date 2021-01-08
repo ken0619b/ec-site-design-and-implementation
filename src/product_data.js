@@ -1,58 +1,57 @@
 const products = [
   {
     sku_id: 1,
-    name: "WH-1000XM4",
+    name: "Flower Speaker",
     description:
-      "Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo. Up to 30-hour battery life with quick charging (10 min charge for 5 hours of playback)...",
-    maker: "Sony",
-    price: 278,
-    stock: "4",
+      "Bluetooth powered simple 'three-quarter in bloom' flower speaker. ",
+    maker: "Forest Sound",
+    price: 100,
+    stock: "12",
   },
   {
     sku_id: 2,
-    name: "N700NC",
+    name: "Earth Keyboard",
     description:
-      "Great ideas are born in silence.Optimized for travel and blending first class Adaptive Noise Cancelling technology with sleek and elegant design accents, the AKG N700NC Wireless...",
-    maker: "AKG",
-    price: 349,
+      "A well-organized 'Earth'( 7 useful shortcut keys with 48-key + 160-level adjuster) keyboard.",
+    maker: "Forest Sound",
+    price: 89,
     stock: "2",
   },
   {
     sku_id: 3,
-    name: "Mini Plug Cable",
+    name: "Gray Earbuds",
     description:
-      "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
-    maker: "Millso",
-    price: 18,
+      "A minimal earbuds pair with dyed ashy-gray. Bluetooth version.",
+    maker: "Forest Sound",
+    price: 109,
     stock: "42",
   },
   {
     sku_id: 4,
-    name: "Amazon Basics Cable",
+    name: "Audio Book",
     description:
-      "Connect speakers, car or headphones with smartphones, tablets, PCs, CD players, Mp3 players and other 3.5mm output devices. Compatible with all digital...",
-    maker: "Amazon",
-    price: 10.2,
-    stock: "55",
+      "It contains 13 stories(musics, notes, etc). comes with 3 CDs.",
+    maker: "Forest Sound",
+    price: 100,
+    stock: "3",
   },
   {
     sku_id: 5,
-    name: "Surface Headphones2",
-    description:
-      "Experience your favorite music and shows like never before. Designed for all-day comfort, improved...",
-    maker: "Microsoft",
-    price: 249,
+    name: "Natural Earbuds",
+    description: "Inspired by Nature. Designed by us. Developed by human.",
+    maker: "Forest Sound",
+    price: 79.00,
     stock: "0",
   },
   {
     sku_id: 6,
-    name: "WH-CH510",
+    name: "Sound Plant",
     description:
-      "Listen to your music throughout the day without interruptions. The WH-CH510 are wireless, lightweight, and have a battery life long enough to keep up....",
+      "Grows up with sound. Blooms with music...",
     maker: "Sony",
-    price: 59,
-    stock: "14",
+    price: 20,
+    stock: "10",
   },
 ];
 
-export default products
+export default products;
