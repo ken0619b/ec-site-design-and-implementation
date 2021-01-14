@@ -69,10 +69,10 @@ const App = () => {
     <Fragment>
       <GlobalStyle />
       <AppContext.Provider value={value}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Header />
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Story />
               <ProductList />
             </Route>
