@@ -34,6 +34,28 @@ const CartContainer = styled.div`
     color: #a9a9a9;
     margin-bottom: 36px;
   }
+
+  .total-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    .total-price-label {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.1em;
+      color: #3e3e3e;
+    }
+    .total-price {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: -0.05em;
+      color: #3e3e3e;
+    }
+  }
 `;
 
 const CartItem = styled.div`
@@ -204,6 +226,14 @@ const Cart = () => {
           </div>
         </CartItem>
       ))}
+      <div className="total-wrapper">
+        <div className="total-price-label">
+          Total Price: $
+          <span className="total-price">
+            {cart_items.reduce((sum, item) => sum + item.count * item.price, 0)}
+          </span>
+        </div>
+      </div>
     </CartContainer>
   );
 };
