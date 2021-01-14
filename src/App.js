@@ -72,7 +72,7 @@ const App = () => {
         <BrowserRouter>
           <Header />
           <Switch>
-            <Route exact path="/">
+            <Route path="/">
               <Story />
               <ProductList />
             </Route>
